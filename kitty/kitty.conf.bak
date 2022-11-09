@@ -1,0 +1,11 @@
+i:
+
+confirm_os_window_close		0
+enable_audio_bell			False
+font_family					Jetbrains Mono
+background_opacity 0.6
+preview_images				True
+# BEGIN_KITTY_THEME
+# Gruvbox Material Dark Hard
+include current-theme.conf
+# END_KITTY_THEME
