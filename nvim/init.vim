@@ -129,7 +129,6 @@ set nohlsearch
 "set background=dark
 set path+=**
 set complete+=k
-
 "autosave when focus lost + no error for untitled buffers
 :au FocusLost * silent! wa
 
@@ -164,11 +163,15 @@ nnoremap zz zz15<c-e>
 "colorscheme PaperColor
 "colorscheme Revolution
 "colorscheme cyberspace
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme tokyonight-storm
 nnoremap <leader>d :set background=dark<CR>
 nnoremap <leader>l :set background=light<CR>
 nnoremap <leader>t :hi Normal guibg=NONE ctermbg=NONE<CR>
 let g:airline_theme='gruvbox'
+
+let g:Tex_FoldedEnvironments = 'begin,section,subsection,subsubsection,list,enumerate,figure,paragraph'
+let g:latex_fold_preamble = 1
 
 lua << EOF
 require('telescope').load_extension('frecency')
