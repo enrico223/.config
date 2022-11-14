@@ -3,7 +3,8 @@ local map = vim.keymap.set
 
 vim.g.mapleader = " "
 --set colorscheme and background color 
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme tokyonight-storm") 
+vim.cmd("nohlsearch")
 map('n', '<leader>d', ':set background=dark<cr>')
 map('n', '<leader>l', ':set background=light<cr>')
 map('n', '<leader>t', ':hi Normal guibg=NONE ctermbg=NONE<cr>')
@@ -25,7 +26,7 @@ map('n', '<C-K>', '<C-W><C-K>', {noremap = true, silent = false})
 map('n', '<C-L>', '<C-W><C-L>', {noremap = true, silent = false})
 map('n', '<C-H>', '<C-W><C-H>', {noremap = true, silent = false})
 
-map('v', 'y', 'y:call system(--wl-copy", @@)<CR> ', {noremap = false, silent = true})
+map('v', 'y', 'y:call system("wl-copy", @@)<CR> ', {noremap = false, silent = true})
 map('i', 'jj', '<esc>', {noremap = true, silent = false})
 
 -- Find files using Telescope command-line sugar.

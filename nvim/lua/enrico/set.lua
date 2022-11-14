@@ -15,5 +15,5 @@ opt.softtabstop = 4
 opt.incsearch = true 
 --opt.nohlsearch = true
 --opt.complete+=k
-opt.wrap = false 
-
+opt.wrap = false  
+opt.textwidth = 100

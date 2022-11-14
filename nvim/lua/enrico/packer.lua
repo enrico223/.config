@@ -51,6 +51,7 @@ return require('packer').startup(function()
 	use 'nanotech/jellybeans.vim'
 	use 'sainnhe/sonokai'
 	use 'fabi1cazenave/kalahari.vim'
+	use 'folke/tokyonight.nvim'
 
 end)
 
