@@ -1,8 +1,9 @@
 --Packer package manager
 return require('packer').startup(function()
-	use 'vim-airline/vim-airline'
-	use 'vim-airline/vim-airline-themes'
-
+   use 'wbthomason/packer.nvim'
+   use {  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
 --Plug for latex documents
 	use 'lervag/vimtex'
 	use 'SirVer/ultisnips'
@@ -31,7 +32,12 @@ return require('packer').startup(function()
 	requires = {"kkharji/sqlite.lua"}
 	}
 	use 'nvim-lua/plenary.nvim'
-
+    use {
+		'nvim-telescope/telescope-file-browser.nvim',
+		config = function()
+			require"telescope".load_extension("file_browser")
+		end,
+	}
 --Plug for center text
 	use 'junegunn/goyo.vim'
 
@@ -44,7 +50,7 @@ return require('packer').startup(function()
 --Plug for greet screen
 	use 'goolord/alpha-nvim'
 --Colorschemes 
-	use 'morhetz/gruvbox'
+	use 'ellisonleao/gruvbox.nvim'
 	use 'dracula/vim'
 	use 'sam4llis/nvim-tundra'
 	use 'agude/vim-eldar'
@@ -52,6 +58,7 @@ return require('packer').startup(function()
 	use 'sainnhe/sonokai'
 	use 'fabi1cazenave/kalahari.vim'
 	use 'folke/tokyonight.nvim'
+	use 'shaunsingh/solarized.nvim'
 
 end)
 

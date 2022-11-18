@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "battery", "clock", "tray"],
+    "modules-right": ["pulseaudio", "network", "battery", "clock", "tray", "custom/power"],
     // Modules configuration
     "sway/workspaces": {
           "disable-scroll": true,
@@ -29,6 +29,13 @@
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
+
+    "custom/power": {
+        "format":"⏻",
+        "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+        "tooltip": false,
+    },
+
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format-disconnected": "Disconnected ",

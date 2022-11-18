@@ -2,9 +2,9 @@ local set = vim.api.nvim_set_keymap
 local map = vim.keymap.set
 
 vim.g.mapleader = " "
+
 --set colorscheme and background color 
-vim.cmd("colorscheme tokyonight-storm") 
-vim.cmd("nohlsearch")
+vim.cmd("nohlsearch") 
 map('n', '<leader>d', ':set background=dark<cr>')
 map('n', '<leader>l', ':set background=light<cr>')
 map('n', '<leader>t', ':hi Normal guibg=NONE ctermbg=NONE<cr>')
@@ -17,6 +17,7 @@ map('n', '<leader>4', '4gt', {noremap = true, silent = false})
 
 --open and close folds with leader
 map('n', '<leader>o', 'zc', {noremap = true, silent = false})
+
 --moving between tabs and splits
 map('n', 'th', ':tabnext<CR>', {noremap = true, silent = false})
 map('n', 'tl', ':tabprev<CR>', {noremap = true, silent = false})
@@ -36,6 +37,11 @@ map('n', '<leader>fg', builtin.live_grep, {})
 map('n', '<leader>fb', builtin.buffers, {})
 map('n', '<leader>fh', builtin.help_tags, {})
 map("n", "<leader>fn", "<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>", {noremap = true, silent = true})
+map('n', '<leader>fl', ":Telescope file_browser<cr>", {})
+
+--Netrw shortcut
+map('n', '<leader>fm', ":Texplore<cr>", {})
+
 -- Move 1 more lines up or down in normal and visual selection modes.
 map('n', 'K', ':m .-2<CR>==', {noremap = true, silent = false})
 map('n', 'J', ':m .+1<CR>==', {noremap = true, silent = false})
@@ -50,8 +56,9 @@ map('n', 'k', 'gk', {noremap = true, silent = false})
 map('i', '<C-F>', '<C-X><C-F>', {noremap = true, silent = false})
 
 --autocompletion with dictionary 
-map('i', '<C-K>', '<C-X><C-K> ', {noremap = true, silent = false})
+map('i', '<C-k>', '<C-x><C-k> ', {noremap = true, silent = false})
 map('i', '<C-L>', '<Esc>[s1z=`]a', {noremap = true, silent = false})
+
 --pairing characters 
 map('i', '(', '()<Esc>i', {noremap = true, silent = false})
 map('i', '{', '{}<Esc>i', {noremap = true, silent = false})
