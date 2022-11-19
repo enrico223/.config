@@ -16,7 +16,7 @@ return require('packer').startup(function()
 	use 'ap/vim-css-color' --displays a preview of colors with CSS
 --lsp config 
 	use 'neovim/nvim-lspconfig'
-	use 'HallerPatrick/py_lsp.nvim'
+	use 'HallerPatrick/py_lsp.nvim' 
 --Plug for filesystem explorer
 	use 'preservim/nerdtree'
 	use {
@@ -59,6 +59,6 @@ return require('packer').startup(function()
 	use 'fabi1cazenave/kalahari.vim'
 	use 'folke/tokyonight.nvim'
 	use 'shaunsingh/solarized.nvim'
-
+	use { "catppuccin/nvim", as = "catppuccin" }
 end)
 

@@ -169,42 +169,45 @@
     },
 
     "custom/arrow1": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
 
     "custom/arrow2": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
 
     "custom/arrow3": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
 
     "custom/arrow4": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
 
     "custom/arrow5": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
 
     "custom/arrow6": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
+	
     "custom/arrow7": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
-    "custom/arrow8": {
-      "format": "",
+    
+	"custom/arrow8": {
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
+
     "custom/power": {
         "format":"⏻",
         "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",

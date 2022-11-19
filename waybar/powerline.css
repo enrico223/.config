@@ -24,7 +24,7 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: JetBrains Mono, Siji;
     font-size: 15px;
     min-height: 0;
 }
@@ -97,8 +97,7 @@ window#waybar.chromium {
 #tray,
 #mode,
 #mpd {
-    padding: 0 10px;
-    color: @mpd;
+    padding: 0 10px; 
 }
 
 #window,
@@ -226,49 +225,53 @@ label:focus {
     min-width: 16px;
 }
 
+#custom-arrow1,
+#custom-arrow2,
+#custom-arrow3,
+#custom-arrow4,
+#custom-arrow5,
+#custom-arrow6,
+#custom-arrow7,
+#custom-arrow8,
+#custom-arrow9 {
+	font-size: 20px
+}
+
 #custom-arrow1 {
-	font-size: 22px;
 	color: @mpd;
 	background: transparent;
 }
 
 #custom-arrow2 {
-	font-size: 22px;
 	color: @pulseaudio;
 	background: transparent;
 }
 
 #custom-arrow3 {
-	font-size: 22px;
 	color: @network;
 	background: @pulseaudio;
 }
 
 #custom-arrow4 {
-	font-size: 22px;
 	color: @custom-keyboard-layout;
 	background: @network;
 }
 
 #custom-arrow5 {
-	font-size: 22px;
 	color: @battery;
 	background: @custom-keyboard-layout;
 }
 
 #custom-arrow6 {
-	font-size: 22px;
 	color: @clock;
 	background: @battery;
 }
 
 #custom-arrow7 {
-	font-size: 22px;
 	color: @tray;
 	background: @power;
 }
 #custom-arrow8 {
-	font-size: 22px;
 	color: @power;
 	background: @clock;
 }

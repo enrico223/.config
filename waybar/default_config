@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "custom/arrow1", "pulseaudio", "custom/arrow2", "network", "custom/arrow3", "sway/language", "custom/arrow4", "battery", "custom/arrow5", "clock", "custom/arrow6", "tray"],
+    "modules-right": ["pulseaudio", "network", "battery", "clock", "tray", "custom/power"],
     // Modules configuration
     "sway/workspaces": {
           "disable-scroll": true,
@@ -70,7 +70,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
+        "format": "{capacity}% <span font='13' rise='-1000'>{icon}</span>",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
@@ -80,21 +80,23 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{essid} ({signalStrength}%) <span font='13' rise='-1000'></span>",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
+    "custom/power": {
+        "format":"⏻",
+        "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+        "tooltip": false,
+    },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": "{volume}% <span font='13' rise='-1000'>{icon}</span>",
+        "format-bluetooth": "{volume}% <span font='13' rise='-1000'>{icon}</span> {format_source}",
+        "format-bluetooth-muted": " <span font='13' rise='-1000'>{icon}</span> {format_source}",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -107,32 +109,32 @@
         "on-click": "pavucontrol"
     },
     "custom/arrow1": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
 
     "custom/arrow2": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
 
     "custom/arrow3": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
 
     "custom/arrow4": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
 
     "custom/arrow5": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
 
     "custom/arrow6": {
-      "format": "",
+      "format": "<span font='13' rise='-1000'></span>",
       "tooltip": false
     },
     "custom/media": {
