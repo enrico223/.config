@@ -71,9 +71,9 @@
             "critical": 15
         },
         "format": "{capacity}% <span font='13' rise='-1000'>{icon}</span>",
-        "format-charging": "{capacity}% <span font='13' rise='-1000'></span>",
-        "format-plugged": "{capacity}% <span font='13' rise='-1000'></span>",
-        "format-alt": "{time} <span font='13' rise='-1000'>{icon}</span>",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
