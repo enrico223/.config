@@ -60,5 +60,6 @@ return require('packer').startup(function()
 	use 'folke/tokyonight.nvim'
 	use 'shaunsingh/solarized.nvim'
 	use { "catppuccin/nvim", as = "catppuccin" }
+	use 'olimorris/onedarkpro.nvim'
 end)
 

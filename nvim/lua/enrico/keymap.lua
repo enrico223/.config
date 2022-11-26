@@ -54,10 +54,13 @@ map('n', 'k', 'gk', {noremap = true, silent = false})
 map('i', '<C-F>', '<C-X><C-F>', {noremap = true, silent = false})
 
 --autocompletion with dictionary 
-map('i', '<C-k>', '<C-x><C-k> ', {noremap = true, silent = false})
+map('i', '<C-K>', '<C-X><C-K> ', {noremap = true, silent = false})
 map('i', '<C-L>', '<Esc>[s1z=`]a', {noremap = true, silent = false})
 
---pairing characters 
+--autocompletion for bibliography
+map('i', '<C-B>', '<C-X><C-O>', {noremap = true, silent = false}) 
+
+--pairing character
 map('i', '(', '()<Esc>i', {noremap = true, silent = false})
 map('i', '{', '{}<Esc>i', {noremap = true, silent = false})
 map('i', '[', '[]<Esc>i', {noremap = true, silent = false})

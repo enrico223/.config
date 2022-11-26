@@ -332,7 +332,7 @@ exec_always {
 ######################
 
  # class                 border  backgr. text    indicator child_border
-client.focused          #c574dd #222436 #a9b8e8 #c574dd   #c574dd
+client.focused          #3b8686 #222436 #a9b8e8 #3b8686   #3b8686
 client.focused_inactive #252734 #252734 #a9b8e8 #252734   #252734
 client.unfocused        #252734 #252734 #888888 #252734   #252734
 client.urgent           #2f343a #900000 #a9b8e8 #900000   #900000

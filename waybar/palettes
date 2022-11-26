@@ -1,0 +1,49 @@
+/* Gruvbox */
+@define-color light #ebdbb2;
+@define-color dark #282828;
+@define-color warning #fabd2f;
+@define-color critical #cc241d;
+@define-color mode #a89984;
+@define-color workspaces #458588;
+@define-color workspacesfocused #83a598;
+@define-color power #d3869b;
+@define-color pulseaudio #CFF09E;
+@define-color cpu #98971a;
+@define-color temp #b8bb22;
+@define-color layout #689d6a;
+@define-color battery #3B8686;
+@define-color network #A8DBA8;
+@define-color time #ebdbb2;
+@define-color mpd #ffffff;
+@define-color clock #0B486B;
+@define-color tray #ebdbb2;
+@define-color custom-keyboard-layout #79BD9A;
+
+/* solarized 
+  #002b36;
+   #073642;
+   #586e75;
+   #657b83;
+    #839496;
+	 #93a1a1;
+	 #eee8d5;
+	 #fdf6e3;
+	#b58900;
+	#cb4b16;
+	   #dc322f;
+   #d33682;
+	#6c71c4;
+	  #268bd2;
+	  #2aa198;
+	 #859900;
+
+https://coolors.co/ca054d-831140-3b1c32-707873-a4d4b4-d2d2a8-ffcf9c-dc9e6e-b96d40
+@define-color light #ca054d
+@define-color workspaces #831140
+#3b1c32
+#707873
+#a4d4b4
+#d2d2a8
+#ffcf9c
+#dc9e6e
+#b96d40
