@@ -4,13 +4,13 @@
 #
  #Read `man 5 sway` for a complete reference.
 
-default_border pixel 2
+default_border pixel 3
 titlebar_border_thickness 1
 titlebar_padding 10 1
 
 # Read `man 5 sway` for a complete reference.
-	#	gaps inner 10
-	#gaps outer 3
+gaps inner 10
+gaps outer 3
 
 # Read `man 5 sway` for a complete reference.
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 25 ppt, border pixel 1
@@ -55,6 +55,8 @@ assign [app_id="Discrod"] workspace 5
 assign [app_id="thunderbird"] workspace 8 
 assign [app_id="org.gnome.Calendar"] workspace 8
 assign [app_id="NewsFlashGTK"] workspace 9
+assign [app_id="signal"] workspace 9
+assign [app_id="org.telegram.desktop"] workspace 9
 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
@@ -63,10 +65,13 @@ set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 30 ppt, border pixel 2 
-set $menu exec $term --class=launcher -e /home/enrico/Scripts/sway-launcher-desktop.sh
+set $menu exec wofi --show drun
 set $term kitty 
+#$term --class=launcher -e /home/enrico/Scripts/sway-launcher-desktop.sh
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -332,7 +337,7 @@ exec_always {
 ######################
 
  # class                 border  backgr. text    indicator child_border
-client.focused          #3b8686 #222436 #a9b8e8 #3b8686   #3b8686
+client.focused          #FFC482 #222436 #a9b8e8  #FFC482  #FFC482
 client.focused_inactive #252734 #252734 #a9b8e8 #252734   #252734
 client.unfocused        #252734 #252734 #888888 #252734   #252734
 client.urgent           #2f343a #900000 #a9b8e8 #900000   #900000
@@ -346,5 +351,5 @@ bar {
     swaybar_command waybar
 }
 
-output "*" bg /home/enrico/Pictures/Wallpapers/nord_linux.jpg fill
+output "*" bg /home/enrico/Pictures/Wallpapers/mountain_4k.jpg fill
 include /etc/sway/config.d/*

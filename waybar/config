@@ -209,7 +209,7 @@
     },
 
     "custom/power": {
-        "format":"⏻",
+        "format":"<span font='15' rise='-1000>⏻</span>",
         "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
         "tooltip": false,
     },
