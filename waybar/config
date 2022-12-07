@@ -75,10 +75,11 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% <span font='20' rise='-1000'>{icon}</span>",
-        "format-charging": "{capacity}% <span font='20' rise='-1000'></span>",
-        "format-plugged": "{capacity}% <span font='20' rise='-1000'></span>",
-        "format-alt": "{time} <span font='20 'rise='-1000'>{icon}</span>",
+		"design-capacity": true,
+        "format": "{capacity}% <span font='15' rise='-1000'>{icon}</span>",
+        "format-charging": "{capacity}% <span font='15' rise='-1000'></span>",
+        "format-plugged": "{capacity}% <span font='15' rise='-1000'></span>",
+        "format-alt": "{time} <span font='15 'rise='-1000'>{icon}</span>",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]

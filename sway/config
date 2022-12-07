@@ -9,8 +9,8 @@ titlebar_border_thickness 1
 titlebar_padding 10 1
 
 # Read `man 5 sway` for a complete reference.
-gaps inner 10
-gaps outer 3
+#gaps inner 10
+#gaps outer 3
 
 # Read `man 5 sway` for a complete reference.
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 25 ppt, border pixel 1
@@ -50,12 +50,11 @@ for_window [title="Save File"] floating enable
 for_window [app_id="firefox" title="Firefox — Sharing Indicator"] kill
 #
 #Workspace assignment 
-assign [title="MASTERPLAN.ods"] workspace 2
 assign [app_id="Discrod"] workspace 5
 assign [app_id="thunderbird"] workspace 8 
 assign [app_id="org.gnome.Calendar"] workspace 8
 assign [app_id="NewsFlashGTK"] workspace 9
-assign [app_id="signal"] workspace 9
+assign [title="Signal"] workspace 9
 assign [app_id="org.telegram.desktop"] workspace 9
 
 # Logo key. Use Mod1 for Alt.
@@ -93,7 +92,6 @@ exec --no-startup-id fcitx5 -d --replace
 exec_always --no-startup-id kanshi
 exec_always --no-startup-id rot8
 exec_always dunst 
-exec_always libreoffice /home/enrico/Documents/MASTERPLAN.ods 
 exec_always autotiling
 exec_always syncthing
 exec_always --no-startup-id tlp

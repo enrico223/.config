@@ -2,10 +2,10 @@ i:
 
 confirm_os_window_close		0
 enable_audio_bell			False
-font_family					Jetbrains Mono
+font_family					JetBrains Mono Medium
 background_opacity			0.8
 preview_images				True
 # BEGIN_KITTY_THEME
-# Tokyo Night Storm
+# Adventure Time
 include current-theme.conf
 # END_KITTY_THEME

@@ -16,7 +16,7 @@ map('n', '<leader>3', '3gt', {noremap = true, silent = false})
 map('n', '<leader>4', '4gt', {noremap = true, silent = false})
 
 --open and close folds with leader
-map('n', '<leader>o', 'zc', {noremap = true, silent = false})
+map('n', '<leader><leader>', 'za', {noremap = true, silent = false})
 
 --moving between tabs and splits
 map('n', 'th', ':tabnext<CR>', {noremap = true, silent = false})

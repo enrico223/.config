@@ -16,5 +16,5 @@ opt.shiftwidth = 4
 opt.incsearch = true 
 --opt.nohlsearch = true
 --opt.complete+=k
-opt.wrap = false  
-opt.textwidth = 100
+opt.wrap = true  
+opt.textwidth = 100 
