@@ -17,4 +17,4 @@ opt.incsearch = true
 --opt.nohlsearch = true
 --opt.complete+=k
 opt.wrap = true  
-opt.textwidth = 100 
+opt.textwidth = 75 

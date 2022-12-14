@@ -3,7 +3,7 @@ require("tokyonight").setup({
 		light_style = "day"
 }) 
 
---require("gruvbox").setup({
--- contrast = "hard",
---})
-vim.cmd("colorscheme gruvbox") 
+require("gruvbox").setup({
+ contrast = "hard",
+})
+vim.cmd("colorscheme sonokai") 

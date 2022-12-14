@@ -349,5 +349,5 @@ bar {
     swaybar_command waybar
 }
 
-output "*" bg /home/enrico/Pictures/Wallpapers/mountain_4k.jpg fill
+output "*" bg /home/enrico/Pictures/Wallpapers/dock.jpg fill
 include /etc/sway/config.d/*

@@ -107,13 +107,13 @@
         "format-bluetooth": "{volume}% <span font='13' rise='-1000'></span>",
         "format-bluetooth-muted": " <span font='13' rise='-1000'>{icon}</span> {format_source}",
         "format-icons": {
-            "headphone": "<span font='13'></span>",
-            "hands-free": "<span font='13'></span>",
-            "headset": "<span font='13'></span>",
-            "phone": "<span font='13'></span>",
-            "portable": "<span font='13'></span>",
-            "car": "<span font='13'></span>",
-            "default": ["<span font='13'></span>", "<span font='13'></span>", "<span font='13'></span>"]
+            "headphone": "<span font='13' rise='-1000'></span>",
+            "hands-free": "<span font='13' rise='-1000'></span>",
+            "headset": "<span font='13 rise='-1000''></span>",
+            "phone": "<span font='13' rise='-1000'></span>",
+            "portable": "<span font='13' rise='-1000'></span>",
+            "car": "<span font='13' rise='-1000'></span>",
+            "default": ["<span font='13' rise='-1000'></span>", "<span font='13' rise='-1000'></span>", "<span font='13' rise='-1000'></span>"]
         },
         "on-click": "pavucontrol"
     },
