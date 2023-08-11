@@ -1,0 +1,8 @@
+[2023-08-10 19:23:43.086] [info] Using configuration file /home/enrico/.config/waybar/config
+[2023-08-10 19:23:43.087] [info] Using CSS file /home/enrico/.config/waybar/style.css
+[2023-08-10 19:23:43.101] [error] media stopped unexpectedly, is it endless?
+[2023-08-10 19:23:43.169] [info] Bar configured (width: 2048, height: 30) for output: DP-2
+
+** (waybar:28124): WARNING **: 19:23:43.177: Status Notifier Item with bus name ':1.9' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:28124): WARNING **: 19:23:43.602: Status Notifier Item with bus name ':1.9' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered

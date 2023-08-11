@@ -1,0 +1,74 @@
+{ 
+	"position": "top",
+	"height": 16,
+	"spacing": 0, //gaps between modules 
+    "modules-left": ["wlr/workspaces"],
+    "modules-right": ["pulseaudio", "battery", "network", "clock", "tray", "custom/power"],
+
+	//Modules settings 
+    "wlr/workspaces": {
+          "disable-scroll": true,
+          "all-outputs": true,
+		  "on-click": "activate"
+     },
+
+	"tray": {
+		"icon-size": 14,
+		"spacing": 10
+	},
+
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format": "{:%a %d %m %Y %H:%M}",
+        "format-alt": "{:%Y-%m-%d}"
+	},
+
+	"battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+		"design-capacity": true,
+        "format": "<span font='15' rise='-1000'>{icon}</span>",
+        "format-charging": "<span font='15' rise='-1000'></span>",
+        "format-plugged": "{<span font='15' rise='-1000'></span>",
+        "format-alt": "{time} <span font='15 'rise='-1000'>{icon}</span>",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "<span font='13' rise='-1000'></span>",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "custom/power": {
+        "format":"⏻",
+        "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+        "tooltip": false,
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "<span font='13' rise='-1000'>{icon}</span>",
+        "format-bluetooth": "<span font='13' rise='-1000'></span>",
+        "format-bluetooth-muted": " <span font='13' rise='-1000'>{icon}</span> {format_source}",
+        "format-icons": {
+            "headphone": "<span font='13'></span>",
+            "hands-free": "<span font='13'></span>",
+            "headset": "<span font='13'></span>",
+            "phone": "<span font='13'></span>",
+            "portable": "<span font='13'></span>",
+            "car": "<span font='13'></span>",
+            "default": ["<span font='13'></span>", "<span font='13'></span>", "<span font='13'></span>"]
+        },
+        "on-click": "pavucontrol"
+    },

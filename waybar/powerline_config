@@ -1,0 +1,216 @@
+// Global 
+{
+    "layer": "top",
+    "position": "top",
+
+    // If height property would be not present, it'd be calculated dynamically
+    "height": 30,
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+    ],
+ 
+//    "modules-center": [  
+//		"sway/window"
+//	],
+
+    "modules-right": [ 
+		"custom/arrow2",
+		"pulseaudio",
+		"custom/arrow3",
+		"network",
+		"custom/arrow4",
+		"custom/arrow5",
+		"battery",
+		"custom/arrow6",
+		"clock",
+		"custom/arrow8",
+		"custom/power",
+		"custom/arrow7",
+		"tray",
+		],
+
+    // Modules
+
+    "sway/workspaces": {
+          "disable-scroll": true,
+          "all-outputs": true,
+          "format": "{icon}",
+        	"format-icons": {
+             		"1": "一",
+             		"2": "二",
+             		"3": "三",
+             		"4": "四",
+             		"5": "五",
+             		"6": "六",
+             		"7": "七",
+             		"8": "八",
+             		"9": "九",
+             		"10": "十"
+         }
+     },
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "custom/PBPbattery": {
+        "exec": "~/.config/waybar/scripts/PBPbattery.sh",
+        "format": "{}",
+    },
+
+    "clock": {
+        "interval": 10,
+        "format-alt": " {:%e %b %Y}", // Icon: calendar-alt
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%e %B %Y}"
+    },
+
+    "network": {
+        "interval": 5,
+        "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
+        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-disconnected": "⚠  Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "xfce4-terminal -e 'nmtui'",
+    },
+
+    "sway/mode": {
+        "format": "{}",
+        "tooltip": false
+    },
+
+    "sway/window": {
+        "format": "{}",
+        "max-length": 120
+    },
+
+    "pulseaudio": {
+        "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}%{icon} ",
+        "format-bluetooth-muted": " {icon} ",
+        "format-muted": "婢 {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "וֹ",
+            "headset": "  ",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [""]
+        },
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume 0 +1%",
+        "on-scroll-down": "pactl set-sink-volume 0 -1%",
+    },
+
+    "custom/weather": {
+        "exec": "~/.config/waybar/scripts/weather.sh",
+        "format": "{text} {icon}",
+        "return-type": "json",
+        "interval": 600,
+        "tooltip-format": "{tooltip}"
+    },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing":3,
+     },
+
+    "backlight#icon": {
+        "format": "{icon}",
+        "format-icons": [""],
+        "on-scroll-down": "brightnessctl -c backlight set 1%-",
+        "on-scroll-up": "brightnessctl -c backlight set +1%"
+    },
+
+    "backlight#value" :{
+         "format": "{percent}%",
+         "on-scroll-down": "brightnessctl -c backlight set 1%-",
+         "on-scroll-up": "brightnessctl -c backlight set +1%"
+    },
+
+    "custom/firefox": {
+        "format": " ",
+        "on-click": "exec firefox",
+        "tooltip": false
+    },
+
+    "custom/terminal": {
+        "format": " ",
+        "on-click": "exec xfce4-terminal",
+        "tooltip": false
+    },
+
+    "custom/files": {
+        "format": " ",
+        "on-click": "exec thunar",
+        "tooltip": false
+    },
+
+    "custom/launcher": {
+        "format":" ",
+        "on-click": "exec wofi -c ~/.config/wofi/config -I",
+        "tooltip": false,
+    },
+
+    "custom/arrow1": {
+      "format": "",
+      "tooltip": false
+    },
+
+    "custom/arrow2": {
+      "format": "",
+      "tooltip": false
+    },
+
+    "custom/arrow3": {
+      "format": "",
+      "tooltip": false
+    },
+
+    "custom/arrow4": {
+      "format": "",
+      "tooltip": false
+    },
+
+    "custom/arrow5": {
+      "format": "",
+      "tooltip": false
+    },
+
+    "custom/arrow6": {
+      "format": "",
+      "tooltip": false
+    },
+	
+    "custom/arrow7": {
+      "format": "",
+      "tooltip": false
+    },
+    
+	"custom/arrow8": {
+      "format": "",
+      "tooltip": false
+    },
+
+    "custom/power": {
+        "format":" ⏻ ",
+        "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+        "tooltip": false,
+    },
+}

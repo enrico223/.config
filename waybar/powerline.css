@@ -1,0 +1,270 @@
+/* Gruvbox */
+@define-color light #ebdbb2;
+@define-color dark #282828;
+@define-color warning #fabd2f;
+@define-color critical #cc241d;
+@define-color mode #a89984;
+@define-color workspaces #458588;
+@define-color workspacesfocused #83a598;
+@define-color power #d3869b;
+@define-color pulseaudio #CFF09E;
+@define-color cpu #98971a;
+@define-color temp #b8bb22;
+@define-color layout #689d6a;
+@define-color battery #3B8686;
+@define-color network #A8DBA8;
+@define-color time #ebdbb2;
+@define-color mpd #ffffff;
+@define-color clock #0B486B;
+@define-color tray #ebdbb2;
+@define-color custom-keyboard-layout #79BD9A;
+
+* {
+    border: none;
+    border-radius: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrains Mono, Siji;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(43, 48, 59, 0.5);
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.5
+
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+    /* Use box-shadow instead of border so the text isn't offset */
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: #64727D;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: #64727D;
+}
+
+#clock,
+#battery,
+#disk,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#mpd {
+    padding: 0 10px; 
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: @clock;
+    color: #ffffff;
+}
+
+#battery {
+    background-color: @battery;
+    color: #ffffff;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: @battery;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#disk {
+    background-color: #964B00;
+}
+
+#network {
+    background-color: @network;
+    color: #000000;
+}
+
+#pulseaudio {
+    background-color: @pulseaudio;
+    color: #000000;
+}
+
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #ffffff;
+}
+
+#custom-media {
+    background-color: #66cc99;
+    color: #2a5c45;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+    background-color: #ffa000;
+}
+
+#custom-power {
+  background-color: @power;
+}
+#tray {
+    background-color: @tray;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#mpd {
+    background-color: @mpd;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: @mpd;
+}
+
+#mpd.stopped {
+    background-color: @mpd;
+}
+
+#mpd.paused {
+    background-color: @mpd;
+}
+
+.custom-spotify {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: #1DB954;
+    color: @dark;
+}
+#custom-keyboard-layout {
+    background: @custom-keyboard-layout;
+    color: #000000;
+    padding: 0 5px;
+    min-width: 16px;
+}
+
+#custom-arrow1,
+#custom-arrow2,
+#custom-arrow3,
+#custom-arrow4,
+#custom-arrow5,
+#custom-arrow6,
+#custom-arrow7,
+#custom-arrow8,
+#custom-arrow9 {
+	font-size: 20px
+}
+
+#custom-arrow1 {
+	color: @mpd;
+	background: transparent;
+}
+
+#custom-arrow2 {
+	color: @pulseaudio;
+	background: transparent;
+}
+
+#custom-arrow3 {
+	color: @network;
+	background: @pulseaudio;
+}
+
+#custom-arrow4 {
+	color: @custom-keyboard-layout;
+	background: @network;
+}
+
+#custom-arrow5 {
+	color: @battery;
+	background: @custom-keyboard-layout;
+}
+
+#custom-arrow6 {
+	color: @clock;
+	background: @battery;
+}
+
+#custom-arrow7 {
+	color: @tray;
+	background: @power;
+}
+#custom-arrow8 {
+	color: @power;
+	background: @clock;
+}
