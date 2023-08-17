@@ -1,8 +1,8 @@
 local obsidian = require("obsidian")
 
-local base_options = obsidian.setup({
+local base_options = {
   -- Required, the path to your vault directory.
-  dir = "/home/enrico/Documents/obsidian_vaults/",
+  dir = "/home/enrico/Documents/obsidian_vaults/notes",
   --dir = "/home/enrico/Documents/notes/",
   -- Optional, completion.
   completion = {
@@ -79,11 +79,8 @@ local base_options = obsidian.setup({
   -- is not installed, or if it the command does not support it, the
   -- remaining finders will be attempted in the original order.
   finder = "telescope.nvim",
-})
-local vault_dirs = {
-  "/home/enrico/Documents/Università/MAGISTRALE/Thesis/obs_thesis/",
-  "/home/enrico/Documents/notes/"
-}  
+}
+local vault_dirs = {}  
 local vaults_dir = "~/Documents/obsidian_vaults"
 
 for dir in vim.fs.dir(vaults_dir) do
