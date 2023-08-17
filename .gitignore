@@ -1,0 +1,17 @@
+# Ignore everything by default
+/*
+
+# Include specific directories and their contents
+!/dunst
+!/hypr
+!/kitty
+!/nvim
+!/sioyek
+!/sway
+!/swaylock
+!/waybar
+!/wofi
+
+# Exclude specific files
+!/starship.toml
+!/.gitignore
