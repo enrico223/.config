@@ -1,10 +1,13 @@
-require('obsidian').setup({
+local obsidian = require("obsidian")
+
+local base_options = obsidian.setup({
   -- Required, the path to your vault directory.
-  dir = "/home/enrico/Documents/Università/MAGISTRALE/Thesis/obs_thesis/",
+  dir = "/home/enrico/Documents/obsidian_vaults/",
+  --dir = "/home/enrico/Documents/notes/",
   -- Optional, completion.
   completion = {
     -- If using nvim-cmp, otherwise set to false
-    nvim_cmp = true,
+    nvim_cmp = false,
     -- Trigger completion at 2 chars
     min_chars = 2,
     -- Where to put new notes created from completion. Valid options are
@@ -59,8 +62,7 @@ require('obsidian').setup({
   -- URL it will be ignored but you can customize this behavior here.
   follow_url_func = function(url)
     -- Open the URL in the default web browser.
-    vim.fn.jobstart({"open", url})  -- Mac OS
-    -- vim.fn.jobstart({"xdg-open", url})  -- linux
+     vim.fn.jobstart({"xdg-open", url})  -- linux
   end,
 
   -- Optional, set to true if you use the Obsidian Advanced URI plugin.
@@ -78,3 +80,57 @@ require('obsidian').setup({
   -- remaining finders will be attempted in the original order.
   finder = "telescope.nvim",
 })
+local vault_dirs = {
+  "/home/enrico/Documents/Università/MAGISTRALE/Thesis/obs_thesis/",
+  "/home/enrico/Documents/notes/"
+}  
+local vaults_dir = "~/Documents/obsidian_vaults"
+
+for dir in vim.fs.dir(vaults_dir) do
+	local path = vim.fn.expand(string.format("%s/%s", vaults_dir, dir))
+	table.insert(vault_dirs, path)
+end
+
+local function configure_obsidian(vaults, options)
+	local cwd = vim.fn.getcwd()
+	local dirs = { cwd }
+	local vault_dir = nil
+	local vault_map = {}
+
+	for _, dir in pairs(vaults) do
+		vault_map[dir] = true
+	end
+
+	for x in vim.fs.parents(cwd) do
+		table.insert(dirs, x)
+	end
+
+	for _, x in pairs(dirs) do
+		local is_match = vault_map[x]
+
+		if is_match then
+			vault_dir = x
+			break
+		end
+	end
+
+	if vault_dir then
+		local workspace_options = vim.tbl_extend("force", options, { dir = vault_dir })
+
+		obsidian.setup(workspace_options)
+	end
+end
+
+local au_group = vim.api.nvim_create_augroup("ObsidianAutogroup", { clear = true })
+
+vim.api.nvim_create_autocmd("DirChanged", {
+	pattern = "*",
+	group = au_group,
+	callback = function()
+		configure_obsidian(vault_dirs, base_options)
+	end,
+	desc = "Re-initialises Obsidian when the working directory changes",
+})
+
+configure_obsidian(vault_dirs, base_options)
+

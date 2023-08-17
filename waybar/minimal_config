@@ -1,9 +1,9 @@
 { 
 	"position": "top",
-	"height": 16,
+	"height": 15,
 	"spacing": 0, //gaps between modules 
     "modules-left": ["wlr/workspaces"],
-    "modules-right": ["pulseaudio", "battery", "network", "clock", "tray", "custom/power"],
+    "modules-right": ["clock", "pulseaudio", "battery", "network", "tray", "custom/power"],
 
 	//Modules settings 
     "wlr/workspaces": {
@@ -20,7 +20,7 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format": "{:%a %d %m %Y %H:%M}",
+		"format": "{:%a,%d/%m/%Y %H:%M}",
         "format-alt": "{:%Y-%m-%d}"
 	},
 
@@ -72,3 +72,4 @@
         },
         "on-click": "pavucontrol"
     },
+}
