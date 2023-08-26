@@ -90,25 +90,10 @@ _G.packer_plugins = {
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
-  everblush = {
-    loaded = true,
-    path = "/home/enrico/.local/share/nvim/site/pack/packer/start/everblush",
-    url = "https://github.com/Everblush/nvim"
-  },
-  ["github-nvim-theme"] = {
-    loaded = true,
-    path = "/home/enrico/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
-  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
-  ["jellybeans.vim"] = {
-    loaded = true,
-    path = "/home/enrico/.local/share/nvim/site/pack/packer/start/jellybeans.vim",
-    url = "https://github.com/nanotech/jellybeans.vim"
   },
   ["kanagawa.nvim"] = {
     loaded = true,
@@ -135,6 +120,11 @@ _G.packer_plugins = {
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/modus-theme-vim",
     url = "https://github.com/ishan9299/modus-theme-vim"
   },
+  moonfly = {
+    loaded = true,
+    path = "/home/enrico/.local/share/nvim/site/pack/packer/start/moonfly",
+    url = "https://github.com/bluz71/vim-moonfly-colors"
+  },
   ["neoscroll.nvim"] = {
     loaded = true,
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
@@ -155,6 +145,11 @@ _G.packer_plugins = {
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/nvim-cheat.sh",
     url = "https://github.com/RishabhRD/nvim-cheat.sh"
   },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/enrico/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -169,11 +164,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
     url = "https://github.com/epwalsh/obsidian.nvim"
-  },
-  ["onedarkpro.nvim"] = {
-    loaded = true,
-    path = "/home/enrico/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
-    url = "https://github.com/olimorris/onedarkpro.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -194,12 +184,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
-  },
-  ["solarized.nvim"] = {
-    config = { "\27LJ\2\nž\1\0\0\a\0\v\0\0156\0\0\0006\2\1\0'\3\2\0B\0\3\0036\2\3\0009\2\4\2'\3\6\0=\3\5\2\18\4\1\0009\2\a\0015\5\t\0005\6\b\0=\6\n\5B\2\3\1K\0\1\0\vconfig\1\0\0\1\0\2\ntheme\vneovim\16transparent\1\nsetup\tdark\15background\6o\bvim\14solarized\frequire\npcall\0" },
-    loaded = true,
-    path = "/home/enrico/.local/share/nvim/site/pack/packer/start/solarized.nvim",
-    url = "https://github.com/maxmx03/solarized.nvim"
   },
   sonokai = {
     loaded = true,
@@ -228,20 +212,10 @@ _G.packer_plugins = {
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/home/enrico/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
-  },
   ultisnips = {
     loaded = true,
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
-  },
-  vim = {
-    loaded = true,
-    path = "/home/enrico/.local/share/nvim/site/pack/packer/start/vim",
-    url = "https://github.com/dracula/vim"
   },
   ["vim-css-color"] = {
     loaded = true,
@@ -266,18 +240,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: telescope-file-browser.nvim
-time([[Config for telescope-file-browser.nvim]], true)
-try_loadstring("\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\17file_browser\19load_extension\14telescope\frequire\0", "config", "telescope-file-browser.nvim")
-time([[Config for telescope-file-browser.nvim]], false)
--- Config for: solarized.nvim
-time([[Config for solarized.nvim]], true)
-try_loadstring("\27LJ\2\nž\1\0\0\a\0\v\0\0156\0\0\0006\2\1\0'\3\2\0B\0\3\0036\2\3\0009\2\4\2'\3\6\0=\3\5\2\18\4\1\0009\2\a\0015\5\t\0005\6\b\0=\6\n\5B\2\3\1K\0\1\0\vconfig\1\0\0\1\0\2\ntheme\vneovim\16transparent\1\nsetup\tdark\15background\6o\bvim\14solarized\frequire\npcall\0", "config", "solarized.nvim")
-time([[Config for solarized.nvim]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
 try_loadstring("\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
+-- Config for: telescope-file-browser.nvim
+time([[Config for telescope-file-browser.nvim]], true)
+try_loadstring("\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\17file_browser\19load_extension\14telescope\frequire\0", "config", "telescope-file-browser.nvim")
+time([[Config for telescope-file-browser.nvim]], false)
 -- Config for: telescope-frecency.nvim
 time([[Config for telescope-frecency.nvim]], true)
 try_loadstring("\27LJ\2\nM\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\rfrecency\19load_extension\14telescope\frequire\0", "config", "telescope-frecency.nvim")

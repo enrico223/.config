@@ -52,6 +52,7 @@ map('n', '<leader>cs', ':Cheat<cr>')
 
 --Netrw shortcut
 map('n', '<leader>fm', ":Explore<cr>", {})
+map('n', '<leader>ob', ":Explore /home/enrico/Documents/obsidian_vaults/<cr>", {})
 
 -- Move 1 more lines up or down in normal and visual selection modes.
 map('v', 'K', ':m <-2<CR>gv=g', {noremap = true, silent = false})
@@ -120,7 +121,6 @@ local bufopts = { noremap=true, silent=true, buffer=bufnr }
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
 end
-
 --ALE kind of an lsp
 map('n', '<leader>sg', ':ALEToggleBuffer<CR>', {noremap = true, silent = false})
 

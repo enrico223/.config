@@ -49,6 +49,8 @@ use {
 --Plug for center text
 	use {'shortcuts/no-neck-pain.nvim', tag = '*'}
 	
+--LSP
+	use 'neovim/nvim-lspconfig'
 --Plug for smooth scrolling 
 	use 'karb94/neoscroll.nvim'
 
@@ -61,43 +63,13 @@ use {
 	
 -- Colorschemes 
 	use 'ellisonleao/gruvbox.nvim'
-	use 'dracula/vim'
     use 'ishan9299/modus-theme-vim'
-	use 'nanotech/jellybeans.vim'
 	use "rebelot/kanagawa.nvim"
 	use 'sainnhe/sonokai'
+	use { 'bluz71/vim-moonfly-colors', as = 'moonfly' }
 	use { 'dasupradyumna/midnight.nvim' }
-	use 'folke/tokyonight.nvim'
 	use { "catppuccin/nvim", as = "catppuccin" }
-	use 'olimorris/onedarkpro.nvim'
-	use	{ 'Everblush/nvim', as = 'everblush' }
-	use { 'projekt0n/github-nvim-theme' }
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
-	use { 'maxmx03/solarized.nvim',
-	  config = function ()
-		local success, solarized = pcall(require, 'solarized')
-
-		vim.o.background = 'dark'
-
-		solarized:setup {
-		  config = {
-			theme = 'neovim',
-			transparent = false
-		  }
-		}
-
-	  end
-}
 
 end)
-
---Telescope config
-
---require('telescope').setup{
---	pickers = {
---		find_files = {
---			hidden = true
---		}
---	}
---}
 
