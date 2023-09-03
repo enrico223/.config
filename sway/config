@@ -10,8 +10,8 @@ titlebar_padding 10 1
 
 # Read `man 5 sway` for a complete reference.
 smart_gaps on
-gaps inner 10 
-gaps outer 6
+gaps inner 6 
+gaps outer 3
 
 # Read `man 5 sway` for a complete reference.
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 25 ppt, border pixel 1
@@ -205,7 +205,6 @@ bindsym $mod+t exec telegram-desktop
 bindsym $mod+b exec $browser
 bindsym $mod+m exec $mail
 bindsym $mod+Shift+n exec $file
-bindsym $mod+q exec flatpak run org.kde.elisa
 bindsym $mod+p exec /home/enrico/Scripts/screenshot.sh
 bindsym $mod+Shift+p exec /home/enrico/Scripts/powermodes.sh
 bindsym $mod+u exec /home/enrico/Scripts/status_nofitication.sh
@@ -216,6 +215,7 @@ bindsym mod1+Shift+f flatpak run com.brave.Browser
 #bindsym $mod+o exec okular
 bindsym $mod+y output DP-2 transform 90
 bindsym $mod+x exec killall -SIGUSR1 waybar
+bindsym $mod+w exec /home/enrico/Scripts/wallpaper_change.sh
 
 # Layout stuff:
 
@@ -300,7 +300,7 @@ bindsym $mod+Shift+e exec /home/enrico/.config/waybar/scripts/power-menu.sh
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    bindsym $mod+q layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
@@ -384,5 +384,5 @@ bar {
     swaybar_command waybar
 }
 
-output "*" bg /home/enrico/Pictures/Wallpapers/cherry\ _flowers.jpg fill
+#output "*" bg /home/enrico/Pictures/Wallpapers/cherry\ _flowers.jpg fill
 include /etc/sway/config.d/*

@@ -2,5 +2,5 @@ require("gruvbox").setup({
  contrast = "hard",
 })
 
-vim.cmd("colorscheme catppuccin-latte ")
+vim.cmd("colorscheme kanagawa")
 
