@@ -124,5 +124,8 @@ end
 --ALE kind of an lsp
 map('n', '<leader>sg', ':ALEToggleBuffer<CR>', {noremap = true, silent = false})
 
+--Improving at Vim
+vim.keymap.set('n', '<leader>ht', ':HardTimeToggle<CR>')
+vim.keymap.set('n', '<leader>vb', ':VimBeGood<CR>')
 -- macro for remappings f li'<Esc>f i',kr'<Esc>A', {noremap = true, silent = falsekr)<Esc>j0
 

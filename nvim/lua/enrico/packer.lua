@@ -60,6 +60,10 @@ use {
 -- Plug for cheat.sh
 	use 'RishabhRD/popfix'	
 	use 'RishabhRD/nvim-cheat.sh'
+
+--Improve at Vim
+	use 'takac/vim-hardtime'
+	use 'ThePrimeagen/vim-be-good'
 	
 -- Colorschemes 
 	use 'ellisonleao/gruvbox.nvim'

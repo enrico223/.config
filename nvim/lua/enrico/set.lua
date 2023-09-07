@@ -28,3 +28,4 @@ g.knap_settings = {
     mdtopdfviewerlaunch = "sioyek %outputfile%",
     mdtopdfviewerrefresh = "none"
 }
+g.hardtime_maxcount = 3

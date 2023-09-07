@@ -19,6 +19,7 @@ for_window [title="pydoro"] move to scratchpad, scratchpad show,
 #resize set 750px 380px
 for_window [title="vim note.md"] floating enable, resize set 750px 380px
 for_window [title="ranger"] move to scratchpad, scratchpad show
+for_window [title="chtex"] move to scratchpad, scratchpad show
 for_window [title="spt"] move to scratchpad, scratchpad show
 for_window [title="New Text Note — Okular"] floating enable
 ### Variables
