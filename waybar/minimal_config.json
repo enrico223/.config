@@ -1,6 +1,5 @@
 {
     "position": "bottom",
-	"layer": "top",
 	"height": 14, 
     "modules-left": ["sway/workspaces"],
     "modules-right": ["pulseaudio", "network", "clock", "battery", "tray", "custom/power"],
@@ -58,7 +57,7 @@
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} |",
+        "format": "{volume}% {icon}  | ",
         "format-bluetooth": "{volume}%  |",
         "format-bluetooth-muted": " {icon} {format_source} |",
         "format-icons": {
@@ -68,7 +67,7 @@
             "phone": " |",
             "portable": " |",
             "car": " |",
-            "default": ["", "", " "]
+            "default": [" |", " |", " |"]
         },
         "on-click": "pavucontrol"
     },

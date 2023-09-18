@@ -67,7 +67,7 @@ map('i', '<C-F>', '<C-X><C-F>', {noremap = true, silent = false})
 
 --autocompletion with dictionary 
 map('i', '<C-K>', '<C-X><C-K> ', {noremap = true, silent = false})
-map('i', '<C-L>', '<Esc>[s1z=`]a', {noremap = true, silent = false})
+map('i', '<C-L>', '<Esc>[s1z=`]a', {noremap = true, silent = true})
 
 --autocompletion for bibliography
 map('i', '<C-B>', '<C-X><C-O>', {noremap = true, silent = false}) 
@@ -80,7 +80,7 @@ map('i', '<C-B>', '<C-X><C-O>', {noremap = true, silent = false})
 --map('i', '"', '""<Esc>i', {noremap = true, silent = false})
 
 --latex shortcuts
-map('n', '<leader>tt', ':VimtexTocToggle<CR>', {noremap = true, silent = false})
+map('n', '<leader>tt', ':VimtexTocToggle<CR> <C-H>', {noremap = true, silent = false})
 map('n', '<leader>la', ':VimtexContextMenu<CR>2', {noremap = true, silent = false})
  
 --"""""""""""""""""

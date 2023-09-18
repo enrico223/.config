@@ -1,37 +1,47 @@
 * {
 	border: none;
 	border-radius: 0;
+	all: initial;
 	font-family: JetBrains Mono, Siji;
-	font-size: 14;
-	padding: 0px 8px;
+	font-size: 14px;
 	margin: 2px;
-	background-color: black;
+	min-height: 0;
+	background-color: transparent;
 	color: white;
 }
 
-#waybar {
-	background-color: transparent;
-}
 
 #workspaces button {
-	background-color: black;
-	color: white;
+	border: none;
+	background-color: transparent;
 	padding: 2px;
 	margin: 2px;
 }
 
 #workspaces button.active {
-    color: #f1c453;
+	border: none;
+    background-color: #a6adc8;
+	padding: 2px;
+	margin: 2px;
 }
 
 #workspaces button.focused {
-    background-color: #a6adc8;
+	border: none;
+    background-color: #f1c453;
+	padding: 2px;
+	margin: 2px;
 }
 
 #workspaces button.urgent {
+	border: none;
     background-color: #eba0ac;
+	padding: 2px;
+	margin: 2px;
 }
 
 #workspaces button:hover {
+	border: none;
     background-color: #cdd6f4;
+	padding: 2px;
+	margin: 2px;
 }

@@ -1,128 +1,54 @@
-
-@define-color color00 #eeeeee;
-@define-color color01 #af0000;
-@define-color color02 #008700;
-@define-color color03 #5f8700;
-@define-color color04 #0087af;
-@define-color color05 #878787;
-@define-color color06 #005f87;
-@define-color color07 #444444;
-@define-color color08 #bcbcbc;
-@define-color color09 #d70000;
-@define-color color10 #d70087;
-@define-color color11 #8700af;
-@define-color color12 #d75f00;
-@define-color color13 #d75f00;
-@define-color color14 #005faf;
-@define-color color15 #005f87;
-@define-color color16 #0087af;
-@define-color color17 #008700;
-
-@define-color ultra-violet #54478c;
-@define-color deep-blue #2a3152;
-@define-color lapis-lazuli #2c699a;
-@define-color blue-munsell #048ba8;
-@define-color keppel #0db39e;
-@define-color emerald #16db93;
-@define-color light-green #83e377;
-@define-color mindaro #b9e769;
-@define-color maize #efea5a;
-@define-color saffron #f1c453;
-@define-color sandy-brown #f29e4c;
-
-
 * {
-    border: none;
-    border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono, Siji;
-    font-size: 14px;
+	border: none;
+	border-radius: 0;
 	all: initial;
-    min-height: 0;
+	font-family: JetBrains Mono, Siji;
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+	min-height: 0;
+	background-color: transparent;
+	color: white;
 }
 
-#waybar {
-	background-color: transparent;
-}
 
 #workspaces button {
-	color: @color00;
-	background: transparent;
+	border: none;
+	color: black;
+	background-color: transparent;
+	padding: 2px;
+	margin: 2px;
+}
+
+#workspaces button.active {
+	border: none;
+	color: black;
+    background-color: #a6adc8;
 	padding: 2px;
 	margin: 2px;
 }
 
 #workspaces button.focused {
+	border: none;
 	color: black;
-	background: @saffron;
+    background-color: #f1c453;
+	padding: 2px;
+	margin: 2px;
 }
 
-#workspaces button.hover {
-	color: black;
-	background: @color16;
-}
 #workspaces button.urgent {
+	border: none;
 	color: black;
-	background: @color09;
+    background-color: #eba0ac;
+	padding: 2px;
+	margin: 2px;
 }
 
-#mode {
-	color: @color00;
-    background-color: @color08;
-}
-
-#clock,
-#battery,
-#disk,
-#network,
-#pulseaudio,
-#custom-power,
-#custom-media,
-#tray,
-#mode,
-#mpd {
-    padding: 0 10px; 
-}
-
-#battery {
-	color: @color00;
-	background-color: @deep-blue;
-} 
-#battery.critical:not(.charging) {
-    background-color: @color01;
-    color: @color00;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-} 
-
-#clock {
-	background-color: @blue-munsell;
-    color: @color00;
-}
-
-#network {
-	background-color: @lapis-lazuli;
-    color: @color00;
-}
-
-#pulseaudio {
-	background-color: @ultra-violet;
-    color: @color00;
-	border-radius:  5px 0 0 5px ;
-}
-
-#tray {
-	background-color: @keppel;
-    color: @color00;
-	border-radius: 0 5px 5px 0;
-} 
-
-#custom-power {
-	background-color: @color01;
-	color: @color00;
-	margin: 3px;
-	border-radius: 5px;
+#workspaces button:hover {
+	border: none;
+	color: black;
+    background-color: #cdd6f4;
+	padding: 2px;
+	margin: 2px;
 }
