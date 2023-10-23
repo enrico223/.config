@@ -31,9 +31,9 @@
             "critical": 15
         },
 		"design-capacity": true,
-        "format": "{capacity}% {icon} |",
-        "format-charging": "{capacity}%  |",
-        "format-plugged": "{capacity}%  |",
+        "format": " {capacity}% {icon} |",
+        "format-charging": " {capacity}%  |",
+        "format-plugged": " {capacity}%  |",
         "format-alt": "{time} {icon} |",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -51,14 +51,14 @@
     },
 
     "custom/power": {
-        "format":"⏻",
+        "format":" ⏻",
         "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
         "tooltip": false
     },
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} |",
+        "format": "{volume}% {icon} ",
         "format-bluetooth": "{volume}%  |",
         "format-bluetooth-muted": " {icon} {format_source} |",
         "format-icons": {
@@ -73,7 +73,7 @@
         "on-click": "pavucontrol"
     },
     "clock": {
-      "format": " {:%a, %d/%m/%Y | %H:%M} |",
+      "format": "  {:%a, %d/%m/%Y | %H:%M} |",
       "interval": 60
     },
     "tray": {

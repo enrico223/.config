@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/enrico/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/enrico/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/enrico/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/enrico/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/enrico/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/enrico/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?.lua;/home/enrico/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?/init.lua;/home/enrico/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?.lua;/home/enrico/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/enrico/.cache/nvim/packer_hererocks/2.1.1697887905/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -217,10 +217,20 @@ _G.packer_plugins = {
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
   },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/enrico/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
   ["vim-css-color"] = {
     loaded = true,
     path = "/home/enrico/.local/share/nvim/site/pack/packer/start/vim-css-color",
     url = "https://github.com/ap/vim-css-color"
+  },
+  ["vim-hardtime"] = {
+    loaded = true,
+    path = "/home/enrico/.local/share/nvim/site/pack/packer/start/vim-hardtime",
+    url = "https://github.com/takac/vim-hardtime"
   },
   ["vim-latex-live-preview"] = {
     loaded = true,
@@ -244,14 +254,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for alpha-nvim]], true)
 try_loadstring("\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
--- Config for: telescope-file-browser.nvim
-time([[Config for telescope-file-browser.nvim]], true)
-try_loadstring("\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\17file_browser\19load_extension\14telescope\frequire\0", "config", "telescope-file-browser.nvim")
-time([[Config for telescope-file-browser.nvim]], false)
 -- Config for: telescope-frecency.nvim
 time([[Config for telescope-frecency.nvim]], true)
 try_loadstring("\27LJ\2\nM\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\rfrecency\19load_extension\14telescope\frequire\0", "config", "telescope-frecency.nvim")
 time([[Config for telescope-frecency.nvim]], false)
+-- Config for: telescope-file-browser.nvim
+time([[Config for telescope-file-browser.nvim]], true)
+try_loadstring("\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\17file_browser\19load_extension\14telescope\frequire\0", "config", "telescope-file-browser.nvim")
+time([[Config for telescope-file-browser.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -2,15 +2,15 @@ i:
 
 confirm_os_window_close		0
 enable_audio_bell			False
-font_family					Agave Nerd
+font_family					VictorMono
 font_size					14
-background_opacity			0.3
+background_opacity			0.6
 preview_images				True
 window_padding_width		0
 window_padding_heigth		0
 window_margin_width			0
 # BEGIN_KITTY_THEME
-# Liquid Carbon Transparent Inverse
+# Gruvbox Light
 include current-theme.conf
 # END_KITTY_THEME
 

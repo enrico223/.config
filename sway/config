@@ -112,6 +112,7 @@ exec_always /home/enrico/Scripts/clamshell_mode.sh
 exec /home/enrico/.config/hypr/scripts/portals.sh
 exec_always /usr/lib/kdeconnectd
 exec thunderbird
+#exec_always /home/enrico/Scripts/kitty_theme.sh
 exec xset +fp /home/enrico/.local/share/fonts
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always /home/enrico/Scripts/battery.sh
@@ -363,8 +364,8 @@ bindsym $mod+r mode "resize"
 set $gnome-schema org.gnome.desktop.interface
 
  exec_always {
-	gsettings set $gnome-schema gtk-theme 'Kanagawa-B'
-	gsettings set $gnome-schema icon-theme 'papirus-icon-theme-white-folders'
+	gsettings set $gnome-schema gtk-theme 'Adwaita-dark'
+	gsettings set $gnome-schema icon-theme 'Papirus-Dark'
 	gsettings set $gnome-schema cursor-theme 'Qogir-dark'
 	gsettings set $gnome-schema font-name 'JetBrains Mono'
 }
