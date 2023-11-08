@@ -210,6 +210,7 @@ bindsym $mod+b exec $browser
 bindsym $mod+m exec $mail
 bindsym $mod+Shift+n exec $file
 bindsym $mod+p exec /home/enrico/Scripts/screenshot.sh
+bindsym $mod+Shift+s exec /home/enrico/Scripts/showkeys.sh
 bindsym $mod+Shift+p exec /home/enrico/Scripts/powermodes.sh
 bindsym $mod+u exec /home/enrico/Scripts/status_nofitication.sh
 bindsym $mod+d exec $menu 
