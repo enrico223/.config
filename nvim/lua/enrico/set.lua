@@ -22,13 +22,16 @@ opt.linebreak = true
 opt.textwidth = 0
 g.livepreview_use_biber = true
 g.vimtex_view_general_viewer = 'sioyek'
+g.vimtex_compiler_silent = 1
 g.vimtex_view_method = 'sioyek'
 g.vimtex_view_skim_reading_bar = 1
 g.knap_settings = {
 	mdoutputext = "pdf",
 	mdtopdf = "pandoc %docroot% -o %outputfile%",
-    mdtopdfviewerlaunch = "sioyek %outputfile%",
+    mdtopdfviewerlaunch = "flatpak run --unset-env=QT_QPA_PLATFORM com.github.ahrm.sioyek %outputfile%",
     mdtopdfviewerrefresh = "none"
 }
 g.hardtime_maxcount = 3
 g.python3_host_prog = "/usr/bin/python3"
+vim.cmd([[highlight link EndOfBuffer Normal]])
+vim.cmd([[hi LineNr guibg=bgt]])

@@ -22,6 +22,7 @@ for_window [title="ranger"] move to scratchpad, scratchpad show
 for_window [title="chtex"] move to scratchpad, scratchpad show
 for_window [title="spt"] move to scratchpad, scratchpad show
 for_window [title="New Text Note — Okular"] floating enable
+for_window [title="Open Document"] floating enable
 ### Variables
 # set floating (nontiling)for apps needing it:
 for_window [class="Yad" instance="yad"] floating enable
@@ -100,7 +101,6 @@ bindcode 201 input type:touchpad events disabled, exec 'squeekboard &'
 exec_always --no-startup-id wlsunset -S 08:00 -s 17:00
 exec --no-startup-id fcitx5 -d --replace
 exec_always --no-startup-id kanshi
-exec_always --no-startup-id rot8
 exec_always dunst 
 exec_always autotiling
 #exec syncthing
@@ -129,7 +129,10 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 ###MANAGING MONITORS AND WORKSPACES
 #Fractional scaling
-output eDP-1 scale 1.3
+output 'AU Optronics 0x7AA7 Unknown' {
+	mode 2560x1600@90.003Hz
+}
+output eDP-1 scale 1.5 mode 2560x1600
 #output DP-2 scale 1.25 mode 2560x1440@143.972Hz
 output DP-1 scale 1.25 mode 2560x1440
 output DP-2 scale 1.25 mode 2560x1440
@@ -145,8 +148,8 @@ workspace 8 output DP-2
 workspace 9 output eDP-1 
 workspace 10 output eDP-1 
 #Allow switching between workspaces with left and right swipes
-bindgesture --input-device=2:7:SynPS/2_Synaptics_TouchPad swipe:left workspace prev
-bindgesture --input-device=2:7:SynPS/2_Synaptics_TouchPad swipe:right workspace next
+bindgesture --input-device=1739:52992:06CBCE44:00_06CB:CF00_Touchpad swipe:left workspace prev
+bindgesture --input-device=1739:52992:06CBCE44:00_06CB:CF00_Touchpad swipe:right workspace next
 
 #Screen rotation
 bindsym $mod+o exec wlr-randr --output eDP-1 --transform 90
@@ -164,7 +167,7 @@ exec swayidle -w timeout 800 'swaylock -f -c 000000' timeout 600 'swaymsg "outpu
 #
 #Touchpad configuration:
 
-   input "2:7:SynPS/2_Synaptics_TouchPad" {
+   input "1739:52992:06CBCE44:00_06CB:CF00_Touchpad" {
        dwt enabled
        tap enabled
        natural_scroll enabled
@@ -390,5 +393,5 @@ bar {
     swaybar_command waybar
 }
 
-#output "*" bg /home/enrico/Pictures/Wallpapers/cherry\ _flowers.jpg fill
+output "*" bg /home/enrico/Pictures/Wallpapers/cherry.webp fill
 include /etc/sway/config.d/*
