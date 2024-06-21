@@ -41,7 +41,7 @@ map('i', 'jj', '<esc>', {noremap = true, silent = false})
 local builtin = require('telescope.builtin')
 map('n', '<leader>ff', builtin.find_files, {}, {hidden = true})
 map('n', '<leader>fg', builtin.live_grep, {})
-map('n', '<leader>bf', builtin.buffers, {})
+map('n', '<leader>b', builtin.buffers, {})
 map('n', '<leader>h', builtin.help_tags, {})
 map('n', '<leader>sc', builtin.keymaps, {})
 map("n", "<leader>fn", "<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>", {noremap = true, silent = true})
@@ -67,7 +67,7 @@ map('i', '<C-F>', '<C-X><C-F>', {noremap = true, silent = false})
 
 --autocompletion with dictionary 
 map('i', '<C-K>', '<C-X><C-K> ', {noremap = true, silent = false})
-map('i', '<C-L>', '<Esc>[s1z=`]a', {noremap = true, silent = true})
+map('i', '<C-L>', '<Esc>[s1z=`]A', {noremap = true, silent = true})
 
 --autocompletion for bibliography
 map('i', '<C-B>', '<C-X><C-O>', {noremap = true, silent = false}) 

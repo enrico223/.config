@@ -2,7 +2,7 @@ local obsidian = require("obsidian")
 
 local base_options = obsidian.setup({
   -- Required, the path to your vault directory.
-  --dir = "/home/enrico/Documents/obsidian_vaults/notes",
+  dir = "/home/enrico/Documents/obsidian_vaults/notes",
   --dir = "/home/enrico/Documents/notes/",
   -- Optional, completion.
   completion = {
@@ -13,10 +13,10 @@ local base_options = obsidian.setup({
     -- Where to put new notes created from completion. Valid options are
     --  * "current_dir" - put new notes in same directory as the current buffer.
     --  * "notes_subdir" - put new notes in the default notes subdirectory.
-    new_notes_location = "current_dir"
   },
 
   -- Optional, customize how names/IDs for new notes are created.
+  new_notes_location = "current_dir",
   note_id_func = function(title)
     -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
     -- In this case a note with the title 'My new note' will given an ID that looks

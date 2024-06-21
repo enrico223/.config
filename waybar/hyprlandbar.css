@@ -1,4 +1,3 @@
-
 @define-color color00 #eeeeee;
 @define-color color01 #af0000;
 @define-color color02 #008700;
@@ -72,8 +71,8 @@
 }
 
 #clock,
-#battery,
 #disk,
+#battery,
 #network,
 #pulseaudio,
 #custom-power,
@@ -81,7 +80,7 @@
 #tray,
 #mode,
 #mpd {
-    padding: 0 10px; 
+    padding: 0 15px 0 15px; 
 }
 
 #battery {

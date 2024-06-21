@@ -21,14 +21,14 @@ opt.wrap = true
 opt.linebreak = true
 opt.textwidth = 0
 g.livepreview_use_biber = true
-g.vimtex_view_general_viewer = 'sioyek'
+g.vimtex_view_general_viewer = 'zathura'
 g.vimtex_compiler_silent = 1
-g.vimtex_view_method = 'sioyek'
+g.vimtex_view_method = 'zathura'
 g.vimtex_view_skim_reading_bar = 1
 g.knap_settings = {
 	mdoutputext = "pdf",
 	mdtopdf = "pandoc %docroot% -o %outputfile%",
-    mdtopdfviewerlaunch = "flatpak run --unset-env=QT_QPA_PLATFORM com.github.ahrm.sioyek %outputfile%",
+    mdtopdfviewerlaunch = "zathura %outputfile%",
     mdtopdfviewerrefresh = "none"
 }
 g.hardtime_maxcount = 3

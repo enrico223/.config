@@ -2,5 +2,5 @@ require("gruvbox").setup({
  contrast = "hard",
 })
 
-vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme xcodedarkhc")
 

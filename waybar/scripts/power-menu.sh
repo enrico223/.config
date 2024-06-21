@@ -6,10 +6,10 @@ selected=$(printf '%s\n' $entries | wofi --conf=$HOME/.config/wofi/config.power 
 
 case $selected in
   logout)
-	if [ $DESKTOP_SESSION == hyprland ]; then
+	if [ $DESKTOP_SESSION == Hyprland ]; then
 		hyprctl dispatch exit
-	elif [ $DESKTOP_SESSION == sway ]; then
-	swaymsg exit
+	elif [ $DESKTOP_SESSION == Sway ]; then
+		swaymsg exit
 	else 
 		echo "Unsupported desktop session: $DESKTOP_SESSION"
 		exit 1
